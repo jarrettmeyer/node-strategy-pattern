@@ -1,7 +1,6 @@
 'use strict';
 const loginStrategies = require('./loginStrategies');
 
-
 function selectLoginStrategy() {
   let strategies = Object.keys(loginStrategies);
   for (let i = 0; i < strategies.length; i++) {
@@ -11,7 +10,6 @@ function selectLoginStrategy() {
     }
   }
 }
-
 
 function login(username, clearPassword) {
   let loginStrategy = selectLoginStrategy();

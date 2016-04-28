@@ -9,21 +9,25 @@ The advantage of this way of writing strategies is that the mainline of code doe
 
 ### Using Test
 
+In the test environment, the user password is always "test". We can use any user we want from our database in `users.json`.
+
 ```
-$ NODE_ENV=test node app.js someuser test
+$ NODE_ENV=test node app.js alice test
 ```
 
 ```json
 {
   "stragegy": "test",
   "success": true,
-  "username": "someuser"
+  "username": "alice"
 }
 ```
 
 ### Using Active directory
 
 We are using a test active directory server located at [ForumSys](http://www.forumsys.com/en/tutorials/integration-how-to/ldap/online-ldap-test-server/).
+
+The list of valid users is: einstein, euclid, euler, gauss, newton, riemann, tesla. The password for all users is "password".
 
 ```
 $ LOGIN_METHOD=AD node app.js riemann password
@@ -56,6 +60,8 @@ $ LOGIN_METHOD=AD node app.js riemann password
 ```
 
 ### Using Database
+
+The list of users and passwords can be found in `users.json`.
 
 ```
 $ LOGIN_METHOD=DB node app.js eleanor h@sh1ng

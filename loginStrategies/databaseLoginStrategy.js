@@ -1,16 +1,7 @@
 'use strict';
 
 const Promise = require('bluebird');
-
-const users = [
-  // Always store hashed passwords in your database. This is just a
-  // demo. That's why the users array is stored in memory.
-  { id: 1, username: 'alice', password: 's3cr3t' },
-  { id: 2, username: 'betty', password: 'b@c0n' },
-  { id: 3, username: 'claire', password: 'p@ssw0rd' },
-  { id: 4, username: 'diane', password: 'c0ff33' },
-  { id: 5, username: 'eleanor', password: 'h@sh1ng' }
-];
+const users = require('../users.json');
 
 class DatabaseLoginStrategy {
 
