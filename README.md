@@ -66,3 +66,12 @@ The list of users and passwords can be found in `users.json`.
 ```
 $ LOGIN_METHOD=DB node app.js eleanor h@sh1ng
 ```
+
+```json
+{
+  "success": true,
+  "strategy": "database",
+  "username": "eleanor",
+  "id": 5
+}
+```
